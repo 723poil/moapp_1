@@ -43,8 +43,8 @@
 /nodejs/mongoui/yarn-error.log*
 
 
-docker-compose.yml
+# docker-compose.yml
 /nodejs/node_modules
-/nodejs/.dockerignore
-/nodejs/Dockerfile
-/nginx/Dockerfile
+# /nodejs/.dockerignore
+# /nodejs/Dockerfile
+# /nginx/Dockerfile
