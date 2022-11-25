@@ -18,7 +18,7 @@ RUN npm install
 
 # COPY --from=builder /usr/src/app/react/build /usr/src/app/react/build
 
-COPY . .
+# COPY . .
 
 EXPOSE 4500
 CMD ["npm", "start"]
