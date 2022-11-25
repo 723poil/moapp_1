@@ -9,7 +9,7 @@
 
 # RUN npm run build
 
-FROM node:16
+FROM node:18
 
 WORKDIR /usr/src/app
 
@@ -18,7 +18,7 @@ RUN npm install
 
 # COPY --from=builder /usr/src/app/react/build /usr/src/app/react/build
 
-# COPY . .
+COPY . .
 
 EXPOSE 4500
 CMD ["npm", "start"]

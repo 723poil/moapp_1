@@ -14,7 +14,7 @@ app.use(express.json())
 
 // require('./initDB')()
 
-app.get('/checkserver', (req, res) => res.send('Hello World'))
+app.get('/checkserver', (req, res) => res.send({'test': 'Hello World'}))
 
 // app.listen(3000, () => {
 //     console.log('REST API running on port 3000')
@@ -39,5 +39,10 @@ app.use(cors(corsOptions))
 // app.get('/dbui/*', (req, res) => {
 //     res.sendFile(path.join(__dirname, '/mongoui/build/index.html'))
 //   })
+
+const fs = require('fs')
+
+const text = 'testtesttest'
+fs.writeFileSync('target.txt', '\ufeff' + text, {encoding: 'utf8'})
 
 app.listen(PORT, SERVER_IP, () => console.log(`Server listening on ip ${SERVER_IP} on port ${PORT}`))
