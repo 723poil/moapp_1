@@ -1,10 +1,11 @@
 const router = require('express').Router()
+const crypto = require('crypto')
 const multer = require('multer')
 
 const storage = multer.diskStorage({
     destination: 'images/',
     filename: (req, file, cb) => {
-        return crypto.psudoRandomBytes(16, (err, raw) => {
+        return crypto.pseudoRandomBytes(16, (err, raw) => {
             if(err) {
                 return cb(err)
             }
@@ -29,6 +30,19 @@ router.post('/', upload.single('file'), (req, res) => {
             mimeType = file.mimeType
             size = file.size
         }
+
+        console.log('originalname : ' + originalname + 
+                ', \nfileName : ' + fileName + 
+                ', \nmimeType : ' + mimeType + 
+                ', \nsize : ' + size)
+                
+        res.send({
+            'originalname' : originalname,
+            'fileName' : fileName,
+            'mimeType' : mimeType,
+            'size' : size,
+            'status' : true
+        })
     } catch (err) {
         console.log(err)
         res.send({
@@ -39,18 +53,6 @@ router.post('/', upload.single('file'), (req, res) => {
             'status' : false
         })
     }
-
-    console.log('originalname : ' + originalname + 
-                ', \nfileName : ' + fileName + 
-                ', \nmimeType : ' + mimeType + 
-                ', \nsize : ' + size)
-    res.send({
-        'originalname' : originalname,
-        'fileName' : fileName,
-        'mimeType' : mimeType,
-        'size' : size,
-        'status' : true
-    })
 })
 
 module.exports = router
