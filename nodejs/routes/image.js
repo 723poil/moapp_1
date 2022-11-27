@@ -32,7 +32,7 @@ router.post('/classification', upload.single('file'), (req, res) => {
             mimeType = file.mimeType
             size = file.size
 
-            result = spawn('python', ['../dlengine/classification.py', fileName])
+            result = spawn('python3', ['./dlengine/classification.py', fileName])
         }
 
         console.log('originalname : ' + originalname + 
@@ -41,27 +41,21 @@ router.post('/classification', upload.single('file'), (req, res) => {
                 ', \nsize : ' + size)
         
         result.stdout.on('data', (data) => {
-            console.log(fileName + ' result : ' + data.toString())
-            res.send({
-                'originalname' : originalname,
-                'fileName' : fileName,
-                'mimeType' : mimeType,
-                'size' : size,
-                'status' : true,
-                'result' : data.toString()
-            })
+            if ((data.toString().substr(0,6)) == 'result') {
+                console.log(fileName + ' ' + data.toString())
+                res.send({
+                    'originalname' : originalname,
+                    'fileName' : fileName,
+                    'mimeType' : mimeType,
+                    'size' : size,
+                    'status' : true,
+                    'result' : data.toString().substr(7, data.toString().length - 7)
+                })
+            }
         })
 
         result.stderr.on('data', (data) => {
-            console.log(fileName + ' result : ' + data.toString())
-            res.send({
-                'originalname' : originalname,
-                'fileName' : fileName,
-                'mimeType' : mimeType,
-                'size' : size,
-                'status' : true,
-                'result' : 'no result'
-            })
+            console.log('python error logs : ', data.toString())
         })
     } catch (err) {
         console.log(err)

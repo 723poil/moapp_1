@@ -15,7 +15,8 @@ services:
   
   backend:
     container_name: backend
-    build: ./nodejs
+    build: 
+      context: ./nodejs
     restart: always
     ports:
       - 4500:4500
