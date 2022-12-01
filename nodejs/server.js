@@ -12,7 +12,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// require('./initDB')()
+require('./initDB')()
 
 app.get('/checkserver', (req, res) => res.send({'test': 'Hello World'}))
 

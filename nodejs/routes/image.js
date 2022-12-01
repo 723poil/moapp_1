@@ -2,6 +2,7 @@ const router = require('express').Router()
 const crypto = require('crypto')
 const multer = require('multer')
 const spawn = require('child_process').spawn
+const imgModel = require('../models/imgmodel')
 
 const storage = multer.diskStorage({
     destination: 'images/',
@@ -43,6 +44,16 @@ router.post('/classification', upload.single('file'), (req, res) => {
         result.stdout.on('data', (data) => {
             if ((data.toString().substr(0,6)) == 'result') {
                 console.log(fileName + ' ' + data.toString())
+
+                imgModel.insertMany({
+                    imageName: fileName,
+                    classification: data.toString().substr(7, data.toString().length - 7)
+                }).then(response => {
+                    console.log(response)
+                }).catch(err => {
+                    console.log(err)
+                })
+
                 res.send({
                     'originalname' : originalname,
                     'fileName' : fileName,
@@ -107,6 +118,14 @@ router.post('/', upload.single('file'), (req, res) => {
             'status' : false
         })
     }
+})
+
+router.get('/search', (req, res) => {
+    imgModel.findAll().then(response => {
+        res.send(response)
+    }).catch(err => {
+        res.send(err)
+    })
 })
 
 module.exports = router
