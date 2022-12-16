@@ -33,6 +33,7 @@ app.use(cors(corsOptions))
 // app.use('/summary', require('./routes/summary'))
 app.use('/image-upload', require('./routes/image'))
 
+app.use('/feedback', require('./routes/feedback'))
 // app.get('/commercial-analysis/*', (req, res) => {
 //     res.sendFile(path.join(__dirname, '/react/build/index.html'))
 // })
