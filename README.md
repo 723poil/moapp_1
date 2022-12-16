@@ -16,7 +16,7 @@ TEAM : 알려줄게
 + 🖥️[프론트](https://github.com/723poil/moapp_1/tree/mobile_develop)
 
 ## Title : 알려줄게
-![icon](https://user-images.githubusercontent.com/75459370/208080051-8e01ea0e-0f17-460f-a71a-d6c0ba2379fa.png)
+<img src="https://user-images.githubusercontent.com/75459370/208080051-8e01ea0e-0f17-460f-a71a-d6c0ba2379fa.png" alt="app-icon" width="150"/>
 
 ###### 딥러닝 이미지 분석 모델을 활용한 분리수거 알리미 어플리케이션
 ---
