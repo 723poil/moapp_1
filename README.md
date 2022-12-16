@@ -16,15 +16,15 @@ TEAM : 알려줄게
 + 🖥️[프론트](https://github.com/723poil/moapp_1/tree/mobile_develop)
 
 ## Title : 알려줄게
-[앱 아이콘 넣을 곳]
+![icon](https://user-images.githubusercontent.com/75459370/208080051-8e01ea0e-0f17-460f-a71a-d6c0ba2379fa.png)
 
 ###### 딥러닝 이미지 분석 모델을 활용한 분리수거 알리미 어플리케이션
 ---
 ## [목차]
-+ 💡[개발배경](https://github.com/723poil/moapp_1/edit/main/README.md#%EA%B0%9C%EB%B0%9C%EB%B0%B0%EA%B2%BD)
-+ 📒[Task 관리](https://github.com/723poil/moapp_1/edit/main/README.md#task-%EA%B4%80%EB%A6%AC)
-+ 💻[주요 기능](https://github.com/723poil/moapp_1/edit/main/README.md#%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5)
-+ 🍳[기술 스택](https://github.com/723poil/moapp_1/edit/main/README.md#%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%83%9D)
++ 💡[개발배경](https://github.com/723poil/moapp_1#%EA%B0%9C%EB%B0%9C%EB%B0%B0%EA%B2%BD)
++ 📒[Task 관리](https://github.com/723poil/moapp_1#task-%EA%B4%80%EB%A6%AC)
++ 💻[주요 기능](https://github.com/723poil/moapp_1#%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5/)
++ 🍳[기술 스택](https://github.com/723poil/moapp_1#%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%83%9D)
 ---
 ## 💡개발배경
 + 해마다 쓰레기 배출량이 증가함에 따라 분리수거 필요성 강조
