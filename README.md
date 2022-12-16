@@ -23,7 +23,7 @@ TEAM : 알려줄게
 ## [목차]
 + 💡[개발배경](https://github.com/723poil/moapp_1#%EA%B0%9C%EB%B0%9C%EB%B0%B0%EA%B2%BD)
 + 📒[Task 관리](https://github.com/723poil/moapp_1#task-%EA%B4%80%EB%A6%AC)
-+ 💻[주요 기능](https://github.com/723poil/moapp_1#%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5/)
++ 💻[주요 기능](https://github.com/723poil/moapp_1#%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5)
 + 🍳[기술 스택](https://github.com/723poil/moapp_1#%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%83%9D)
 ---
 ## 💡개발배경
