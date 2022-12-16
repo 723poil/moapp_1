@@ -10,6 +10,11 @@ TEAM : 알려줄게
 사범대학 일반사회교육과 2020112665 지현배
 ```
 
+## 브랜치
++ 📒[문서](https://github.com/723poil/moapp_1/tree/document)
++ 💻[서버](https://github.com/723poil/moapp_1/tree/server_develop)
++ 🖥️[프론트](https://github.com/723poil/moapp_1/tree/mobile_develop)
+
 ## Title : 알려줄게
 [앱 아이콘 넣을 곳]
 
@@ -36,3 +41,7 @@ TEAM : 알려줄게
 ## 💻주요 기능
 
 ## 🍳기술 스택
+<img width="687" alt="image" src="https://user-images.githubusercontent.com/75459370/208059882-abb3a062-8aba-40a1-8a08-d70c40f8f547.png">
+
+<img width="862" alt="image" src="https://user-images.githubusercontent.com/75459370/208059745-922804a1-59cf-4e9c-a84b-573f26fc98c2.png">
+
