@@ -43,5 +43,5 @@ TEAM : 알려줄게
 ## 🍳기술 스택
 <img width="687" alt="image" src="https://user-images.githubusercontent.com/75459370/208059882-abb3a062-8aba-40a1-8a08-d70c40f8f547.png">
 
-<img width="862" alt="image" src="https://user-images.githubusercontent.com/75459370/208059745-922804a1-59cf-4e9c-a84b-573f26fc98c2.png">
+<img width="862" alt="image" src="https://user-images.githubusercontent.com/75459370/208082117-a33a3e5c-c7fb-4492-b3c4-05905a3db8a0.png">
 
