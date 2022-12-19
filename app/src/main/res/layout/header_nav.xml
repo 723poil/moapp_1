@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DDEED7">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navheaderconstraint1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <ImageButton
+            android:id="@+id/mypageImgBtn1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/knu_new_ch_basic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1"></ImageButton>
+        <TextView
+            android:id="@+id/mypageTV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="김경대"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/mypageImgBtn1"
+            app:layout_constraintTop_toTopOf="@+id/mypageImgBtn1"/>
+        <TextView
+            android:id="@+id/mypageTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kimkyungdae@knu.ac.kr"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@+id/mypageImgBtn1"
+            app:layout_constraintTop_toBottomOf="@id/mypageTV1"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navheaderconstraint2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/navheaderconstraint1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="일단 그냥 버튼"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/navheaderconstraint2"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
