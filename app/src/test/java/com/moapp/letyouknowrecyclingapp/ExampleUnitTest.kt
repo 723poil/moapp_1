@@ -1,4 +1,4 @@
-package com.example.test
+package com.moapp.letyouknowrecyclingapp
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.test
+package com.moapp.letyouknowrecyclingapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
