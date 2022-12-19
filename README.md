@@ -25,6 +25,7 @@ TEAM : 알려줄게
 + 📒[Task 관리](https://github.com/723poil/moapp_1#task-%EA%B4%80%EB%A6%AC)
 + 💻[주요 기능](https://github.com/723poil/moapp_1#%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5)
 + 🍳[기술 스택](https://github.com/723poil/moapp_1#%EA%B8%B0%EC%88%A0-%EC%8A%A4%ED%83%9D)
++ 📱[데모 영상]()
 ---
 ## 💡개발배경
 + 해마다 쓰레기 배출량이 증가함에 따라 분리수거 필요성 강조
@@ -44,4 +45,6 @@ TEAM : 알려줄게
 <img width="687" alt="image" src="https://user-images.githubusercontent.com/75459370/208059882-abb3a062-8aba-40a1-8a08-d70c40f8f547.png">
 
 <img width="862" alt="image" src="https://user-images.githubusercontent.com/75459370/208082117-a33a3e5c-c7fb-4492-b3c4-05905a3db8a0.png">
+
+## 📱데모 영상
 
