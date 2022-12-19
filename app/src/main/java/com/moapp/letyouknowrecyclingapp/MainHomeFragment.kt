@@ -51,38 +51,47 @@ class MainHomeFragment : Fragment(), View.OnClickListener, Interaction  {
         }
         binding.menuBtn1.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
+            intent.putExtra("data2", 1)
             startActivity(intent)
         }
         binding.menuBtn2.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
+            intent.putExtra("data2", 2)
             startActivity(intent)
         }
         binding.menuBtn3.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
+            intent.putExtra("data2", 3)
             startActivity(intent)
         }
         binding.menuBtn4.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
+            intent.putExtra("data2", 4)
             startActivity(intent)
         }
         binding.menuBtn5.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
+            intent.putExtra("data2", 5)
             startActivity(intent)
         }
         binding.menuBtn6.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
+            intent.putExtra("data2", 6)
             startActivity(intent)
         }
         binding.menuBtn7.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
+            intent.putExtra("data2", 7)
             startActivity(intent)
         }
         binding.menuBtn8.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
+            intent.putExtra("data2", 8)
             startActivity(intent)
         }
         binding.menuBtn9.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
+            intent.putExtra("data2", 9)
             startActivity(intent)
         }
 
