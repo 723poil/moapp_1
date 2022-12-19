@@ -34,7 +34,7 @@
                     <androidx.viewpager2.widget.ViewPager2
                         android:id="@+id/viewPager2"
                         android:layout_width="0dp"
-                        android:layout_height="200dp"
+                        android:layout_height="160dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -73,7 +73,7 @@
                         android:paddingTop="4dp"
                         android:paddingEnd="4dp"
                         android:paddingBottom="4dp"
-                        android:text="모두 보기>"
+                        android:text="모두 보기"
                         android:layout_marginRight="5dp"
                         app:layout_constraintBottom_toBottomOf="@+id/viewPager2"
                         app:layout_constraintEnd_toEndOf="parent" />

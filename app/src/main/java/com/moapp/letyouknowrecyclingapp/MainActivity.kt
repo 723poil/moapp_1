@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         toggle = ActionBarDrawerToggle(this, binding.drawer, 0, 0)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         toggle.syncState()
+        //기본타이틀 안나오게
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         //드로어 아이템 선택 리스너
         binding.drawerView.setNavigationItemSelectedListener() {

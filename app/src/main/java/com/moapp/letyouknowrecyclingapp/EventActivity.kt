@@ -12,7 +12,7 @@ class EventActivity : AppCompatActivity() {
         binding = ActivityEventBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.ivClose.setOnClickListener(){
+        binding.backBtn.setOnClickListener(){
             finish()
         }
     }

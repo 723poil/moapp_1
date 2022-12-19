@@ -13,7 +13,7 @@ class MainMypageSetting1Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.backBtn.setOnClickListener(){
-            onBackPressed()
+            finish()
         }
     }
 }
