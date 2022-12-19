@@ -36,7 +36,7 @@ TEAM : 알려줄게
 ## 📒Task 관리
 관련링크
 > + [회의록](https://github.com/723poil/moapp_1/tree/document/%ED%9A%8C%EC%9D%98%EB%A1%9D)
-> + [issue 관리]()
+> + [issue 관리](https://github.com/723poil/moapp_1/issues)
 
 ## 💻주요 기능
 
