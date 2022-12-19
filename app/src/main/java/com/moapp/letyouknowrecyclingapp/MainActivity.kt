@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var data1 = 0;
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -80,20 +79,11 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavView.setOnItemSelectedListener {
             when (it.itemId) {
 
-                R.id.search -> if(data1 != 1){
-                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout, MainSearchFragment()).addToBackStack(null).commit()
-                    data1 = 1
-                }
+                R.id.search -> supportFragmentManager.beginTransaction().replace(R.id.frame_layout, MainSearchFragment()).addToBackStack(null).commit()
                 //R.id.search -> replaceFragment(MainSearchFragment())
-                R.id.home -> if(data1 != 0){
-                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout, MainHomeFragment()).addToBackStack(null).commit()
-                    data1 = 0
-                }
+                R.id.home -> supportFragmentManager.beginTransaction().replace(R.id.frame_layout, MainHomeFragment()).addToBackStack(null).commit()
                 //R.id.home -> replaceFragment(MainHomeFragment())
-                R.id.mypage -> if(data1 != 2){
-                    supportFragmentManager.beginTransaction().replace(R.id.frame_layout, MainMypageFragment()).addToBackStack(null).commit()
-                    data1 = 2
-                }
+                R.id.mypage -> supportFragmentManager.beginTransaction().replace(R.id.frame_layout, MainMypageFragment()).addToBackStack(null).commit()
                 //R.id.mypage -> replaceFragment(MainMypageFragment())
 
 
