@@ -19,6 +19,7 @@ class TabActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val binding = ActivityTabBinding.inflate(layoutInflater)
+        val data = intent.getIntExtra("data2", 0)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
@@ -30,41 +31,55 @@ class TabActivity : AppCompatActivity() {
         //탭바 바인딩
         val tabLayout: TabLayout = binding.tabs
 
-        val tab1: TabLayout.Tab = tabLayout.newTab()
-        tabLayout.addTab(tab1)
 
-        val tab2: TabLayout.Tab = tabLayout.newTab()
-        tabLayout.addTab(tab2)
-
-        val tab3: TabLayout.Tab = tabLayout.newTab()
-        tabLayout.addTab(tab3)
-
-        val tab4: TabLayout.Tab = tabLayout.newTab()
-        tabLayout.addTab(tab4)
-
-        val tab5: TabLayout.Tab = tabLayout.newTab()
-        tabLayout.addTab(tab5)
-
-        val tab6: TabLayout.Tab = tabLayout.newTab()
-        tabLayout.addTab(tab6)
-
-        val tab7: TabLayout.Tab = tabLayout.newTab()
-        tabLayout.addTab(tab7)
-
-        val tab8: TabLayout.Tab = tabLayout.newTab()
-        tabLayout.addTab(tab8)
-
-        val tab9: TabLayout.Tab = tabLayout.newTab()
-        tabLayout.addTab(tab9)
-
+        val tabTitleArray = arrayOf(
+            "알루미늄",
+            "종이팩",
+            "유리",
+            "플라스틱",
+            "의류",
+            "종이류",
+            "목재",
+            "음식물",
+            "기타"
+        )
 
         //viewpager2 바인딩하고, 어뎁터연결
         val viewPager = binding.viewpager2
         viewPager.adapter = TabFragmentPagerAdapter(this)
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = "Tab${(position + 1)}"
+            tab.text = tabTitleArray[position]
         }.attach()
+
+
+        if(data == 1){
+            binding.viewpager2.setCurrentItem(0,false)
+        }
+        else if(data == 2){
+            binding.viewpager2.setCurrentItem(1,false)
+        }
+        else if(data == 3){
+            binding.viewpager2.setCurrentItem(2,false)
+        }
+        else if(data == 4){
+            binding.viewpager2.setCurrentItem(3,false)
+        }
+        else if(data == 5){
+            binding.viewpager2.setCurrentItem(4,false)
+        }
+        else if(data == 6){
+            binding.viewpager2.setCurrentItem(5,false)
+        }
+        else if(data == 7){
+            binding.viewpager2.setCurrentItem(6,false)
+        }
+        else if(data == 8){
+            binding.viewpager2.setCurrentItem(7,false)
+        }
+        else if(data == 9){
+            binding.viewpager2.setCurrentItem(8,false)
+        }
 
         tabLayout.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {
             // 탭 버튼을 선택할 때 이벤트
