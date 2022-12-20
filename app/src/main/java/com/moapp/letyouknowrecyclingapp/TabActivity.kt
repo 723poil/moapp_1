@@ -97,6 +97,11 @@ class TabActivity : AppCompatActivity() {
             }
         })
 
+        binding.home.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
         //플롯팅액션바
         binding.FAB.setOnClickListener() {
             var intent = Intent(this, ImageActivity::class.java)

@@ -20,6 +20,8 @@ object ClassificationRepository {
     private val api: Api
     private const val url = "http://34.64.115.128"
     private var fileName: String? = null
+    public var result: String? = null
+    public var isGet: Boolean = false
 
     init {
         val retrofit = Retrofit.Builder()
@@ -58,14 +60,16 @@ object ClassificationRepository {
                 //멈춰야함
                 val body = response.body()
                 if (response.isSuccessful && body != null) {
-                    val result = body.result
-                    Log.d("lsh", result)
+                    result = body.result
+                    Log.d("lsh", result.toString())
                     fileName = body.fileName
+                    isGet = true
                 }
             }
 
             override fun onFailure(call: Call<ResponseClassification>, t: Throwable) {
                 //멈춰야함
+                isGet = true
                 Log.d("lsh", "${call.toString()}, ${t.toString()}")
             }
         })

@@ -16,7 +16,12 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.moapp.letyouknowrecyclingapp.databinding.ActivityImageBinding
+import kotlinx.coroutines.*
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.channels.consumeEach
 import java.text.SimpleDateFormat
+import kotlin.system.measureTimeMillis
+import kotlin.time.measureTime
 
 class ImageActivity : BaseActivity() {
 
@@ -136,6 +141,11 @@ class ImageActivity : BaseActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK) {
+            val builder = AlertDialog.Builder(this)
+            var intent = Intent(this, TabActivity::class.java)
+            val context = this
+            lateinit var resultText: String
+
             when(requestCode) {
                 REQ_CAMERA -> {
                     /* val bitmap = data?.extras?.get("data") as Bitmap // 미리보기이미지
@@ -151,37 +161,84 @@ class ImageActivity : BaseActivity() {
                         val loading = LoadingDialog(this)
                         loading.startLoading()
 
-                        //loading.isDismiss()
+                        val channel = Channel<Long>()
+                        val backgroundScope = CoroutineScope(Dispatchers.Default + Job())
+                        backgroundScope.launch {
+                            var time = measureTimeMillis {
+                                while (!ClassificationRepository.isGet) {
+                                    continue
+                                }
+                            }
+                            resultText = ClassificationRepository.result.toString()
+                            when (ClassificationRepository.result.toString()) {
+                                "Aluminium" ->  {
+                                    resultText = "알루미늄"
+                                    intent.putExtra("data2", 1)
+                                } // 1
+                                "Carton" -> {
+                                    resultText = "종이팩"
+                                    intent.putExtra("data2", 2)
+                                } // 2
+                                "Glass" -> {
+                                    resultText = "유리"
+                                    intent.putExtra("data2", 3)
+                                } // 3
+                                "Organic Waste" -> {
+                                    resultText = "음식물"
+                                    intent.putExtra("data2", 8)
+                                } // 8
+                                "Other Plastics" -> {
+                                    resultText = "플라스틱"
+                                    intent.putExtra("data2", 4)
+                                } // 4
+                                "Paper and Cardboard" -> {
+                                    resultText = "종이류"
+                                    intent.putExtra("data2", 6)
+                                } // 6
+                                "Plastic" -> {
+                                    resultText = "플라스틱"
+                                    intent.putExtra("data2", 4)
+                                } // 4
+                                "Textiles" -> {
+                                    resultText = "의류"
+                                    intent.putExtra("data2", 5)
+                                } // 5
+                                "Wood" -> {
+                                    resultText = "목재"
+                                    intent.putExtra("data2", 7)
+                                } // 7
+                            }
+                            ClassificationRepository.result = null
+                            Log.d("lsh", "time : $time")
+                            channel.send(time)
+                        }
 
+                        val mainScope = GlobalScope.launch(Dispatchers.Main) {
+                            channel.consumeEach {
+                                ClassificationRepository.isGet = false
+                                loading.isDismiss()
 
-                        val handler = Handler()
-                        handler.postDelayed({
-
-                            val builder = AlertDialog.Builder(this)
-                            builder
-                                .setTitle("맞는지 확인해")
-                                .setMessage("결과값을 확인하세요 맞으면 YES, 틀리면N NO")
-                                .setPositiveButton("YES",
-                                    DialogInterface.OnClickListener { dialog, id ->
-                                        // YES 버튼 선택 시 수행
-                                        var intent = Intent(this, TabActivity::class.java)
-                                        startActivity(intent)
-                                    })
-                                .setNegativeButton("NO",
-                                    DialogInterface.OnClickListener { dialog, id ->
-                                        // NO 버튼 선택 시 수행
-                                        // 결과값 서버로 전송
-                                        ClassificationRepository.sendValidation(this)
-                                        //No 클릭시, image 초기화
-                                        binding.imagePreview.setImageBitmap(null)
-                                    })
-                            // Create the AlertDialog object and return it
-                            builder.create()
-                            builder.show()
-
-                        },5000)
-
-
+                                builder
+                                    .setTitle("$resultText")
+                                    .setMessage("결과값을 확인하세요 맞으면 YES, 틀리면N NO")
+                                    .setPositiveButton("YES",
+                                        DialogInterface.OnClickListener { dialog, id ->
+                                            // YES 버튼 선택 시 수행
+                                            startActivity(intent)
+                                        })
+                                    .setNegativeButton("NO",
+                                        DialogInterface.OnClickListener { dialog, id ->
+                                            // NO 버튼 선택 시 수행
+                                            // 결과값 서버로 전송
+                                            ClassificationRepository.sendValidation(context)
+                                            //No 클릭시, image 초기화
+                                            binding.imagePreview.setImageBitmap(null)
+                                        })
+                                // Create the AlertDialog object and return it
+                                builder.create()
+                                builder.show()
+                            }
+                        }
 
                         realUri = null
                         filenameInUri = null
@@ -198,33 +255,84 @@ class ImageActivity : BaseActivity() {
                             val loading = LoadingDialog(this)
                             loading.startLoading()
 
-                            val handler = Handler()
-                            handler.postDelayed({
+                            val channel = Channel<Long>()
+                            val backgroundScope = CoroutineScope(Dispatchers.Default + Job())
+                            backgroundScope.launch {
+                                var time = measureTimeMillis {
+                                    while (!ClassificationRepository.isGet) {
+                                        continue
+                                    }
+                                }
+                                resultText = ClassificationRepository.result.toString()
+                                when (ClassificationRepository.result.toString()) {
+                                    "Aluminium" ->  {
+                                        resultText = "알루미늄"
+                                        intent.putExtra("data2", 1)
+                                    } // 1
+                                    "Carton" -> {
+                                        resultText = "종이팩"
+                                        intent.putExtra("data2", 2)
+                                    } // 2
+                                    "Glass" -> {
+                                        resultText = "유리"
+                                        intent.putExtra("data2", 3)
+                                    } // 3
+                                    "Organic Waste" -> {
+                                        resultText = "음식물"
+                                        intent.putExtra("data2", 8)
+                                    } // 8
+                                    "Other Plastics" -> {
+                                        resultText = "플라스틱"
+                                        intent.putExtra("data2", 4)
+                                    } // 4
+                                    "Paper and Cardboard" -> {
+                                        resultText = "종이류"
+                                        intent.putExtra("data2", 6)
+                                    } // 6
+                                    "Plastic" -> {
+                                        resultText = "플라스틱"
+                                        intent.putExtra("data2", 4)
+                                    } // 4
+                                    "Textiles" -> {
+                                        resultText = "의류"
+                                        intent.putExtra("data2", 5)
+                                    } // 5
+                                    "Wood" -> {
+                                        resultText = "목재"
+                                        intent.putExtra("data2", 7)
+                                    } // 7
+                                }
+                                ClassificationRepository.result = null
+                                Log.d("lsh", "time : $time")
+                                channel.send(time)
+                            }
 
-                                val builder = AlertDialog.Builder(this)
-                                builder
-                                    .setTitle("맞는지 확인해")
-                                    .setMessage("결과값을 확인하세요 맞으면 YES, 틀리면N NO")
-                                    .setPositiveButton("YES",
-                                        DialogInterface.OnClickListener { dialog, id ->
-                                            // YES 버튼 선택 시 수행
-                                            var intent = Intent(this, TabActivity::class.java)
-                                            startActivity(intent)
-                                        })
-                                    .setNegativeButton("NO",
-                                        DialogInterface.OnClickListener { dialog, id ->
-                                            // NO 버튼 선택 시 수행
-                                            // 결과값 서버로 전송
-                                            ClassificationRepository.sendValidation(this)
-                                            //No 클릭시, image 초기화
-                                            binding.imagePreview.setImageURI(null)
-                                        })
-                                // Create the AlertDialog object and return it
-                                builder.create()
-                                builder.show()
+                            val mainScope = GlobalScope.launch(Dispatchers.Main) {
+                                channel.consumeEach {
+                                    ClassificationRepository.isGet = false
+                                    loading.isDismiss()
 
-                            },5000)
-
+                                    builder
+                                        .setTitle("$resultText")
+                                        .setMessage("결과값을 확인하세요 맞으면 YES, 틀리면N NO")
+                                        .setPositiveButton("YES",
+                                            DialogInterface.OnClickListener { dialog, id ->
+                                                // YES 버튼 선택 시 수행
+                                                startActivity(intent)
+                                            })
+                                        .setNegativeButton("NO",
+                                            DialogInterface.OnClickListener { dialog, id ->
+                                                // NO 버튼 선택 시 수행
+                                                // 결과값 서버로 전송
+                                                ClassificationRepository.sendValidation(context)
+                                                //No 클릭시, image 초기화
+                                                binding.imagePreview.setImageBitmap(null)
+                                            })
+                                    // Create the AlertDialog object and return it
+                                    builder.create()
+                                    builder.show()
+                                }
+                            }
 
                         } catch(err: Exception) {
                             Log.d("lsh", err.toString())
