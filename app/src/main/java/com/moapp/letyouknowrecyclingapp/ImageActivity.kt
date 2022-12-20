@@ -211,6 +211,7 @@ class ImageActivity : BaseActivity() {
                                     resultText = "목재"
                                     intent.putExtra("data2", 7)
                                 } // 7
+                                else -> Log.d("lsh", "result is null")
                             }
                             ClassificationRepository.result = null
                             Log.d("lsh", "time : $time")
@@ -305,6 +306,7 @@ class ImageActivity : BaseActivity() {
                                         resultText = "목재"
                                         intent.putExtra("data2", 7)
                                     } // 7
+                                    else -> Log.d("lsh", "result is null")
                                 }
                                 ClassificationRepository.result = null
                                 Log.d("lsh", "time : $time")

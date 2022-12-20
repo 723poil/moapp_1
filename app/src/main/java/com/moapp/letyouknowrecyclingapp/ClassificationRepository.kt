@@ -64,6 +64,8 @@ object ClassificationRepository {
                     Log.d("lsh", result.toString())
                     fileName = body.fileName
                     isGet = true
+                } else {
+                    isGet = true
                 }
             }
 
