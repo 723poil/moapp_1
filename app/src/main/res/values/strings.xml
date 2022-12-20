@@ -2,4 +2,18 @@
     <string name="app_name">LetyouknowRecyclingApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Aluminum">내용물을 비우고 다른 재질의 품목이 함께 있을 경우 되도록 제거한 뒤 분리배출 하도록 한다. 알루미늄 캔은 분리배출 장소에 알루미늄이 따로 나눠져 있지 않은 경우에는 캔류에 버린다.</string>
+    <string name="Aluminum2">페인트 등이 묻은 용기, 플라스틱 등 다른 재질과 합성된 제품</string>
+    <string name="Paperpack">물로 헹군 후 일반폐지와 별도배출.</string>
+    <string name="Paperpack2">내용물이 들어있는 종이팩류</string>
+    <string name="Glass">거울, 깨진 유리, 전구 등의 품목은 소량일 경우 종량제 봉투에 담아서 버려야 하며 유리병일 경우에는 재질이 다른 뚜껑은 따로 분리배출한다.</string>
+    <string name="Glass2">사기그릇, 거울, 머그잔, 컵 등</string>
+    <string name="Clothes">물기에 젖지 않도 마대 등에 담거나, 묶어서 배출한다. ※ 민간재활용사업자 비치한 수거함에 배출</string>
+    <string name="Clothes2">이불, 베게, 담요, 가죽제품, 카페트류</string>
+    <string name="Paper">신문, 책자, 박스 등의 물품은 스프링, 비닐테이프 등의 종이가 아닌 품목을 제거한 후 분리배출한다.</string>
+    <string name="Paper2">비닐 코팅된 광고지, 포장지. 스프링 등 다른 물질이 있는 책자. 기저귀, 화장실 휴지 등</string>
+    <string name="Wood">소형 나무 제품일 경우에는 종량제 봉투에 담아서 버리거나 봉투가 찢어질 우려가 있다면 일반 마대자루에 담아서 폐기물 스티커를 붙이거 가연성 쓰레기마대에 담아줍니다. ※ 못 등 이물질이 박힌 경우에는 되도록 제거하도록 합니다.</string>
+    <string name="Wood2">봉투에 담지 못하는 대형 가구일 경우 시/군/구청 사이트에서 대형폐기물 배출신고를 한 후 대형폐기물스티커를 붙여서 배출합니다. </string>물
+    <string name="Food">이물질과 물기를 최대한 제거한 후 음식물쓰레기 종량제 봉투에 담아 수거용기에 물이 고이지 않도록 배출. 비닐, 병뚜껑, 이쑤시개, 패각류, 티백 등의 딱딱하거나 포장되어 재활용을 어렵게 하는 물질은 제거 후 배출합니다.</string>
+    <string name="Food2">파, 미나리 등의 뿌리. 고추씨, 고추대. 옥수수 껍질, 옥수수대. 섬유질 많은 껍질(양파,마늘). 딱딱한 껍데기(호두, 땅콩). 복숭아 등의 핵과류 씨. 육류의 뼈. 껍데기(갑각류, 어패류). 생선뼈. 알껍질. 각총 차류(녹차 등)의 찌꺼기. 한약재 찌꺼기.</string>
 </resources>
