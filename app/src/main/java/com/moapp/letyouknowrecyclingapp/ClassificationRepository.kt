@@ -30,6 +30,7 @@ object ClassificationRepository {
     }
 
     fun postImg(bitmap: Bitmap?, context: Context) {
+        fileName = null
         val filePath = context.applicationInfo.dataDir + File.separator + System.currentTimeMillis() + ".jpg"
         val file = File(filePath)
         Log.d("lsh", "${filePath}, ${file.toString()}")
