@@ -39,63 +39,37 @@
                     app:layout_constraintTop_toTopOf="@id/searchconstraint">
 
                     <EditText
-                        android:id="@+id/textView1"
+                        android:id="@+id/edittextView1"
+                        android:singleLine="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="재활용 방법 검색"
+                        android:hint="재활용 방법 검색"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
+                        android:id="@+id/search_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
                         android:src="@drawable/ic_baseline_search_24"
-                        app:layout_constraintBottom_toBottomOf="@+id/textView1"
+                        app:layout_constraintBottom_toBottomOf="@+id/edittextView1"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/textView1" />
+                        app:layout_constraintTop_toTopOf="@+id/edittextView1" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/searchconstraint2"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/rectangle_all_corner_radius"
-                    app:layout_constraintTop_toBottomOf="@id/searchconstraint1">
-                    <SearchView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/searchconstraint3"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/rectangle_all_corner_radius"
-                    app:layout_constraintTop_toBottomOf="@id/searchconstraint2">
-                    <androidx.appcompat.widget.SearchView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
