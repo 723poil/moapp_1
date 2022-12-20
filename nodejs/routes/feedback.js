@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const imgModel = require('../models/imgmodel')
 
-router.post('/update_validity', (req, res) => {
+router.post('/update-validity', (req, res) => {
     var imgid = req.body.imgid
 	
 	var bool_ = (req.body.bool == undefined)? false : req.body.bool
