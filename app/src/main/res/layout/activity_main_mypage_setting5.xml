@@ -58,16 +58,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
-            <TextView
-                android:id="@+id/TVContent1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:paddingTop="8dp"
-                android:text="2022.12.21"
-                android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@+id/TVName1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
