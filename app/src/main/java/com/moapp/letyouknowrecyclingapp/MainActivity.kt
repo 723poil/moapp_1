@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
@@ -42,35 +43,35 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
 
                 R.id.item1 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item2 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item3 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item4 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item5 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
@@ -120,6 +121,8 @@ class MainActivity : AppCompatActivity() {
             backKeyPressedTime = System.currentTimeMillis()
             binding.bottomNavView.selectedItemId = R.id.home
             supportFragmentManager.beginTransaction().replace(R.id.frame_layout, MainHomeFragment()).commit()
+            Toast.makeText(this, "한번더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show()
+
             return
         }
 
@@ -128,6 +131,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:title="최근 본 분리수거"
+        android:title="공지사항"
         android:id="@+id/item1"
-        android:icon="@drawable/ic_baseline_remove_red_eye_24"
+        android:icon="@drawable/ic_baseline_campaign_24"
         android:iconTint="@color/black"/>
     <item
         android:title="알림"
@@ -11,15 +11,15 @@
         android:icon="@drawable/ic_baseline_notifications_24"
         android:iconTint="@color/black"/>
     <item
-        android:title="공지사항"
-        android:id="@+id/item3"
-        android:icon="@drawable/ic_baseline_campaign_24"/>
-    <item
         android:title="문의하기"
-        android:id="@+id/item4"
+        android:id="@+id/item3"
         android:icon="@drawable/ic_baseline_contact_support_24"/>
     <item
         android:title="저작권"
-        android:id="@+id/item5"
+        android:id="@+id/item4"
         android:icon="@drawable/ic_baseline_check_24"/>
+    <item
+        android:title="제작자"
+        android:id="@+id/item5"
+        android:icon="@drawable/ic_baseline_emoji_emotions_24"/>
 </menu>

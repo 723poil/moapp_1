@@ -110,35 +110,35 @@ class TabActivity : AppCompatActivity() {
         binding.drawerView.setNavigationItemSelectedListener() {
             when(it.itemId) {
                 R.id.item1 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item2 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item3 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item4 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item5 -> {
-                    var intent = Intent(this, MainMypageSetting1Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
