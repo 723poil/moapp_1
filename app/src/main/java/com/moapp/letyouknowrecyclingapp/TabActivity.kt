@@ -117,28 +117,28 @@ class TabActivity : AppCompatActivity() {
                 }
 
                 R.id.item2 -> {
-                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting3Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item3 -> {
-                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting4Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item4 -> {
-                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting5Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
 
                 R.id.item5 -> {
-                    var intent = Intent(this, MainMypageSetting2Activity::class.java)
+                    var intent = Intent(this, MainMypageSetting6Activity::class.java)
                     startActivity(intent)
                     binding.drawer.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true

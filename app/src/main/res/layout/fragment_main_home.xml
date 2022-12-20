@@ -39,13 +39,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+
                     <TextView
                         android:id="@+id/banner_page_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="2dp"
                         android:text="1"
-                        android:textColor="#fff"
+                        android:textColor="#000"
                         app:layout_constraintBottom_toBottomOf="@+id/banner_pager_number_all"
                         app:layout_constraintEnd_toStartOf="@+id/banner_pager_number_all"
                         app:layout_constraintTop_toTopOf="@+id/banner_pager_number_all" />
@@ -57,7 +58,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:text="/5"
-                        android:textColor="#fff"
+                        android:textColor="#000"
                         app:layout_constraintBottom_toBottomOf="@+id/banner_event_all"
                         app:layout_constraintEnd_toStartOf="@+id/banner_event_all"
                         app:layout_constraintTop_toTopOf="@+id/banner_event_all" />
@@ -77,7 +78,11 @@
                         android:layout_marginRight="5dp"
                         app:layout_constraintBottom_toBottomOf="@+id/viewPager2"
                         app:layout_constraintEnd_toEndOf="parent" />
+
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/homeconstraint1"
@@ -89,7 +94,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="20dp"
                     app:layout_constraintTop_toBottomOf="@+id/homeconstraint0"
-                    app:layout_constraintBottom_toTopOf="@+id/homeconstraint2">
+                    app:layout_constraintBottom_toBottomOf="parent">
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/cameraBtn"
                         android:layout_width="150dp"
@@ -287,40 +292,7 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/homeconstraint2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp"
-                    app:layout_constraintTop_toBottomOf="@+id/homeconstraint1"
-                    android:background="@drawable/rectangle_all_corner_radius">
 
-                    <EditText
-                        android:id="@+id/searchtext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="재활용 방법 검색"
-                        android:textSize="18sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="5dp"
-                        android:src="@drawable/ic_baseline_search_24"
-                        app:layout_constraintBottom_toBottomOf="@+id/searchtext"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/searchtext" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

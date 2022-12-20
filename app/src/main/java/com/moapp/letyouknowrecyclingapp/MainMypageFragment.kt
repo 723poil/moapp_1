@@ -59,19 +59,19 @@ class MainMypageFragment : Fragment() {
         }
 
         binding.mypageconstraint4.setOnClickListener() {
-            var intent = Intent(context, MainMypageSetting2Activity::class.java)
+            var intent = Intent(context, MainMypageSetting3Activity::class.java)
             startActivity(intent)
         }
         binding.mypageconstraint5.setOnClickListener() {
-            var intent = Intent(context, MainMypageSetting2Activity::class.java)
+            var intent = Intent(context, MainMypageSetting4Activity::class.java)
             startActivity(intent)
         }
         binding.mypageconstraint6.setOnClickListener() {
-            var intent = Intent(context, MainMypageSetting2Activity::class.java)
+            var intent = Intent(context, MainMypageSetting5Activity::class.java)
             startActivity(intent)
         }
         binding.mypageconstraint7.setOnClickListener() {
-            var intent = Intent(context, MainMypageSetting2Activity::class.java)
+            var intent = Intent(context, MainMypageSetting6Activity::class.java)
             startActivity(intent)
         }
 
