@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     //드로어
     lateinit var toggle: ActionBarDrawerToggle
     private var data1 = 1
+    var backKeyPressedTime : Long = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -113,6 +114,20 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+
+        if (System.currentTimeMillis() > backKeyPressedTime + 500) {
+            backKeyPressedTime = System.currentTimeMillis()
+            binding.bottomNavView.selectedItemId = R.id.home
+            supportFragmentManager.beginTransaction().replace(R.id.frame_layout, MainHomeFragment()).commit()
+            return
+        }
+
+        if (System.currentTimeMillis() <= backKeyPressedTime + 500) {
+            finishAffinity()
+        }
+
+    }
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
