@@ -89,12 +89,12 @@ class MainHomeFragment : Fragment(), View.OnClickListener, Interaction  {
             intent.putExtra("data2", 8)
             startActivity(intent)
         }
-        binding.menuBtn9.setOnClickListener{
+        /*binding.menuBtn9.setOnClickListener{
             var intent = Intent(context, TabActivity::class.java)
             intent.putExtra("data2", 9)
             startActivity(intent)
         }
-
+*/
 
 
         viewModel = ViewModelProvider(this).get(MainHomeFragmentViewModel::class.java)

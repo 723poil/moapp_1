@@ -9,7 +9,7 @@ class TabFragmentPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter
     val fragments: List<Fragment>
 
     init {
-        fragments= listOf(Tab1Fragment(), Tab2Fragment(), Tab3Fragment(), Tab4Fragment(), Tab5Fragment(), Tab6Fragment(), Tab7Fragment(), Tab8Fragment(), Tab9Fragment())
+        fragments= listOf(Tab1Fragment(), Tab2Fragment(), Tab3Fragment(), Tab4Fragment(), Tab5Fragment(), Tab6Fragment(), Tab7Fragment(), Tab8Fragment())
     }
 
     override fun getItemCount(): Int = fragments.size

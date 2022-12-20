@@ -43,7 +43,6 @@ class TabActivity : AppCompatActivity() {
             "종이류",
             "목재",
             "음식물",
-            "기타"
         )
 
         //viewpager2 바인딩하고, 어뎁터연결
@@ -79,9 +78,7 @@ class TabActivity : AppCompatActivity() {
         else if(data == 8){
             binding.viewpager2.setCurrentItem(7,false)
         }
-        else if(data == 9){
-            binding.viewpager2.setCurrentItem(8,false)
-        }
+
 
         tabLayout.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {
             // 탭 버튼을 선택할 때 이벤트

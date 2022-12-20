@@ -138,7 +138,7 @@
                         android:layout_height="48dp"
                         app:layout_constraintCircle="@id/cameraBtn"
                         app:layout_constraintCircleRadius="130dp"
-                        app:layout_constraintCircleAngle="40"
+                        app:layout_constraintCircleAngle="45"
                         app:layout_constraintStart_toStartOf="@+id/cameraBtn"
                         app:layout_constraintTop_toTopOf="@id/cameraBtn"
                         android:background="@drawable/menu2"/>
@@ -159,7 +159,7 @@
                         android:layout_height="48dp"
                         app:layout_constraintCircle="@id/cameraBtn"
                         app:layout_constraintCircleRadius="130dp"
-                        app:layout_constraintCircleAngle="80"
+                        app:layout_constraintCircleAngle="90"
                         app:layout_constraintStart_toStartOf="@+id/cameraBtn"
                         app:layout_constraintTop_toTopOf="@id/cameraBtn"
                         android:background="@drawable/menu3"/>
@@ -180,7 +180,7 @@
                         android:layout_height="48dp"
                         app:layout_constraintCircle="@id/cameraBtn"
                         app:layout_constraintCircleRadius="130dp"
-                        app:layout_constraintCircleAngle="120"
+                        app:layout_constraintCircleAngle="135"
                         app:layout_constraintStart_toStartOf="@+id/cameraBtn"
                         app:layout_constraintTop_toTopOf="@id/cameraBtn"
                         android:background="@drawable/menu4"/>
@@ -201,7 +201,7 @@
                         android:layout_height="48dp"
                         app:layout_constraintCircle="@id/cameraBtn"
                         app:layout_constraintCircleRadius="130dp"
-                        app:layout_constraintCircleAngle="160"
+                        app:layout_constraintCircleAngle="180"
                         app:layout_constraintStart_toStartOf="@+id/cameraBtn"
                         app:layout_constraintTop_toTopOf="@id/cameraBtn"
                         android:background="@drawable/menu5"/>
@@ -225,7 +225,7 @@
                         android:layout_marginTop="8dp"
                         android:background="@drawable/menu6"
                         app:layout_constraintCircle="@id/cameraBtn"
-                        app:layout_constraintCircleAngle="200"
+                        app:layout_constraintCircleAngle="225"
                         app:layout_constraintCircleRadius="130dp"
                         app:layout_constraintStart_toStartOf="@+id/cameraBtn"
                         app:layout_constraintTop_toTopOf="@id/cameraBtn" />
@@ -247,7 +247,7 @@
                         android:layout_height="48dp"
                         app:layout_constraintCircle="@id/cameraBtn"
                         app:layout_constraintCircleRadius="130dp"
-                        app:layout_constraintCircleAngle="240"
+                        app:layout_constraintCircleAngle="270"
                         app:layout_constraintStart_toStartOf="@+id/cameraBtn"
                         app:layout_constraintTop_toTopOf="@id/cameraBtn"
                         android:background="@drawable/menu7"/>
@@ -268,7 +268,7 @@
                         android:layout_height="48dp"
                         app:layout_constraintCircle="@id/cameraBtn"
                         app:layout_constraintCircleRadius="130dp"
-                        app:layout_constraintCircleAngle="280"
+                        app:layout_constraintCircleAngle="315"
                         app:layout_constraintStart_toStartOf="@+id/cameraBtn"
                         app:layout_constraintTop_toTopOf="@id/cameraBtn"
                         android:background="@drawable/menu8"/>
@@ -283,26 +283,7 @@
                         app:layout_constraintStart_toStartOf="@+id/menuBtn8"
                         android:textColor="@color/black"/>
 
-                    <ImageButton
-                        android:id="@+id/menuBtn9"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:layout_constraintCircle="@id/cameraBtn"
-                        app:layout_constraintCircleRadius="130dp"
-                        app:layout_constraintCircleAngle="320"
-                        app:layout_constraintStart_toStartOf="@+id/cameraBtn"
-                        app:layout_constraintTop_toTopOf="@id/cameraBtn"
-                        android:background="@drawable/menu9"/>
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="기타"
-                        android:textStyle="normal"
-                        app:layout_constraintTop_toBottomOf="@+id/menuBtn9"
-                        app:layout_constraintEnd_toEndOf="@+id/menuBtn9"
-                        app:layout_constraintStart_toStartOf="@+id/menuBtn9"
-                        android:textColor="@color/black"/>
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
