@@ -27,6 +27,8 @@ class TabActivity : AppCompatActivity() {
         toggle = ActionBarDrawerToggle(this, binding.drawer, 0, 0)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         toggle.syncState()
+        //기본타이틀 안나오게
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         //탭바 바인딩
         val tabLayout: TabLayout = binding.tabs

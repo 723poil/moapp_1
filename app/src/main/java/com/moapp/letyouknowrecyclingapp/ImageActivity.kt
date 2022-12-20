@@ -10,6 +10,7 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
@@ -35,6 +36,10 @@ class ImageActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.backBtn.setOnClickListener(){
+            finish()
+        }
+
         // 1. 공용저장소 권한이 있는지 확인
         requirePermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), PERM_STORAGE)
     }
@@ -45,7 +50,7 @@ class ImageActivity : BaseActivity() {
         binding.buttonCamera.setOnClickListener() {
             requirePermissions(arrayOf(Manifest.permission.CAMERA), PERM_CAMERA)
         }
-        // 5. 갤러리 버튼이 클리 되면 갤러리를 연다
+        // 5. 갤러리 버튼이 클릭 되면 갤러리를 연다
         binding.buttonGallery.setOnClickListener() {
             openGallery()
         }
@@ -138,8 +143,43 @@ class ImageActivity : BaseActivity() {
 
                     realUri?.let { uri ->
                         val bitmap = loadBitmap(uri)
+                        //이미지프리뷰에 사진결과 띄우기
                         binding.imagePreview.setImageBitmap(bitmap)
+                        //서버로 전송
                         ClassificationRepository.postImg(bitmap, this)
+
+                        val loading = LoadingDialog(this)
+                        loading.startLoading()
+
+                        //loading.isDismiss()
+
+
+                        val handler = Handler()
+                        handler.postDelayed({
+
+                            val builder = AlertDialog.Builder(this)
+                            builder
+                                .setTitle("맞는지 확인해")
+                                .setMessage("결과값을 확인하세요 맞으면 YES, 틀리면N NO")
+                                .setPositiveButton("YES",
+                                    DialogInterface.OnClickListener { dialog, id ->
+                                        // YES 버튼 선택 시 수행
+                                        var intent = Intent(this, TabActivity::class.java)
+                                        startActivity(intent)
+                                    })
+                                .setNegativeButton("NO",
+                                    DialogInterface.OnClickListener { dialog, id ->
+                                        // NO 버튼 선택 시 수행
+                                        // 결과값 서버로 전송
+                                        ClassificationRepository.sendValidation(this)
+                                        //No 클릭시, image 초기화
+                                        binding.imagePreview.setImageBitmap(null)
+                                    })
+                            // Create the AlertDialog object and return it
+                            builder.create()
+                            builder.show()
+
+                        },5000)
 
 
 
@@ -155,27 +195,36 @@ class ImageActivity : BaseActivity() {
                             val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, uri)
                             ClassificationRepository.postImg(bitmap, this)
 
-                            val builder = AlertDialog.Builder(this)
-                            builder
-                                .setTitle("맞는지 확인해")
-                                .setMessage("결과값을 확인하세요 맞으면 YES, 틀리면N NO")
-                                .setPositiveButton("YES",
-                                    DialogInterface.OnClickListener { dialog, id ->
-                                        // YES 버튼 선택 시 수행
-                                        var intent = Intent(this, TabActivity::class.java)
-                                        startActivity(intent)
-                                    })
-                                .setNegativeButton("NO",
-                                    DialogInterface.OnClickListener { dialog, id ->
-                                        // NO 버튼 선택 시 수행
-                                        // 초기화되게 해야함
-//                                        var intent = Intent(this, ImageActivity::class.java)
-//                                        startActivity(intent)
-                                        ClassificationRepository.sendValidation(this)
-                                    })
-                            // Create the AlertDialog object and return it
-                            builder.create()
-                            builder.show()
+                            val loading = LoadingDialog(this)
+                            loading.startLoading()
+
+                            val handler = Handler()
+                            handler.postDelayed({
+
+                                val builder = AlertDialog.Builder(this)
+                                builder
+                                    .setTitle("맞는지 확인해")
+                                    .setMessage("결과값을 확인하세요 맞으면 YES, 틀리면N NO")
+                                    .setPositiveButton("YES",
+                                        DialogInterface.OnClickListener { dialog, id ->
+                                            // YES 버튼 선택 시 수행
+                                            var intent = Intent(this, TabActivity::class.java)
+                                            startActivity(intent)
+                                        })
+                                    .setNegativeButton("NO",
+                                        DialogInterface.OnClickListener { dialog, id ->
+                                            // NO 버튼 선택 시 수행
+                                            // 결과값 서버로 전송
+                                            ClassificationRepository.sendValidation(this)
+                                            //No 클릭시, image 초기화
+                                            binding.imagePreview.setImageURI(null)
+                                        })
+                                // Create the AlertDialog object and return it
+                                builder.create()
+                                builder.show()
+
+                            },5000)
+
 
                         } catch(err: Exception) {
                             Log.d("lsh", err.toString())

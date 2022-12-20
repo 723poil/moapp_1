@@ -86,18 +86,18 @@ object ClassificationRepository {
                     if (response.isSuccessful && body != null) {
                         val result = body.result
                         if (result) {
-                            Toast.makeText(context, "전송 성공하였습니다.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "피드백 전송 성공하였습니다.", Toast.LENGTH_SHORT).show()
                         } else {
-                            Toast.makeText(context, "전송 실패하였습니다.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "피드백 전송 실패하였습니다.", Toast.LENGTH_SHORT).show()
                         }
                     } else {
-                        Toast.makeText(context, "전송 실패하였습니다.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "피드백 전송 실패하였습니다.", Toast.LENGTH_SHORT).show()
                     }
                     fileName = null
                 }
 
                 override fun onFailure(call: Call<ResponseValidation>, t: Throwable) {
-                    Toast.makeText(context, "전송 실패하였습니다.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "피드백 전송 실패하였습니다.", Toast.LENGTH_SHORT).show()
                 }
             })
         }
