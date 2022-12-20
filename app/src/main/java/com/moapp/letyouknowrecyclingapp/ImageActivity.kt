@@ -37,6 +37,10 @@ class ImageActivity : BaseActivity() {
 
         // 1. 공용저장소 권한이 있는지 확인
         requirePermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), PERM_STORAGE)
+
+        binding.backBtn.setOnClickListener(){
+            finish()
+        }
     }
 
 
