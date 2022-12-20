@@ -2,24 +2,22 @@ package com.moapp.letyouknowrecyclingapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.webkit.WebView
-import android.webkit.WebViewClient
 import com.moapp.letyouknowrecyclingapp.databinding.ActivityMainMypageWebview1Binding
+import com.moapp.letyouknowrecyclingapp.databinding.ActivityMainMypageWebview2Binding
 import kotlinx.android.synthetic.main.activity_main_mypage_webview1.*
 
-class MainMypageWebview1 : AppCompatActivity() {
-    private lateinit var binding: ActivityMainMypageWebview1Binding
+class MainMypageWebview2 : AppCompatActivity() {
+    private lateinit var binding: ActivityMainMypageWebview2Binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainMypageWebview1Binding.inflate(layoutInflater)
+        binding = ActivityMainMypageWebview2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.backbutton.setOnClickListener(){
             onBackPressed()
         }
-
-        val webView = findViewById<WebView>(R.id.webView)
-        webView.webViewClient = WebViewClient()
-        webView.loadUrl("https://www.knu.ac.kr")
+        binding.webView.webViewClient
+        webView.loadUrl("https://www.dgs.go.kr/dgs/minwon/page.php?mnu_uid=11027")
     }
 }

@@ -139,7 +139,7 @@ class MainHomeFragment : Fragment(), View.OnClickListener, Interaction  {
         lifecycleScope.launch {
             whenResumed {
                 while (isRunning) {
-                    delay(5000)
+                    delay(3000)
                     viewModel.getcurrentPosition()?.let {
                         viewModel.setCurrentPosition((it.plus(1)) % 5)
                     }

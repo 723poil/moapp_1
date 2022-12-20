@@ -7,11 +7,13 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.app.ActivityCompat.finishAffinity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
 import com.moapp.letyouknowrecyclingapp.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_tab.view.*
+import kotlinx.android.synthetic.main.header_nav.view.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -38,9 +40,12 @@ class MainActivity : AppCompatActivity() {
         //기본타이틀 안나오게
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
+
+
         //드로어 아이템 선택 리스너
         binding.drawerView.setNavigationItemSelectedListener() {
             when(it.itemId) {
+
 
                 R.id.item1 -> {
                     var intent = Intent(this, MainMypageSetting2Activity::class.java)
@@ -117,7 +122,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        if (System.currentTimeMillis() > backKeyPressedTime + 500) {
+        if (System.currentTimeMillis() > backKeyPressedTime + 1500) {
             backKeyPressedTime = System.currentTimeMillis()
             binding.bottomNavView.selectedItemId = R.id.home
             supportFragmentManager.beginTransaction().replace(R.id.frame_layout, MainHomeFragment()).commit()
@@ -126,7 +131,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        if (System.currentTimeMillis() <= backKeyPressedTime + 500) {
+        if (System.currentTimeMillis() <= backKeyPressedTime + 1500) {
             finishAffinity()
         }
 

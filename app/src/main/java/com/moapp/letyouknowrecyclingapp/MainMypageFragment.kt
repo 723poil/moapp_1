@@ -44,7 +44,7 @@ class MainMypageFragment : Fragment() {
         }
 
         binding.mypageBtn2.setOnClickListener() {
-            var intent = Intent(context, MainMypageWebview1::class.java)
+            var intent = Intent(context, MainMypageWebview2::class.java)
             startActivity(intent)
         }
 
