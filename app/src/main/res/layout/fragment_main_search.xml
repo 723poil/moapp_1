@@ -38,7 +38,7 @@
                     android:background="@drawable/rectangle_all_corner_radius"
                     app:layout_constraintTop_toTopOf="@id/searchconstraint">
 
-                    <TextView
+                    <EditText
                         android:id="@+id/textView1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
