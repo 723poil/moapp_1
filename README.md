@@ -75,4 +75,4 @@ TEAM : 알려줄게
 <img width="862" alt="image" src="https://user-images.githubusercontent.com/75459370/208082117-a33a3e5c-c7fb-4492-b3c4-05905a3db8a0.png">
 
 ## 📱데모 영상
-
+[유튜브 링크](https://www.youtube.com/watch?v=vTFUlpyOn6M)
