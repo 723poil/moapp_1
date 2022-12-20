@@ -8,16 +8,18 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.tabs.TabLayout
 import com.moapp.letyouknowrecyclingapp.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_tab.view.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     //드로어
     lateinit var toggle: ActionBarDrawerToggle
+    private var data1 = 1
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        var data1 = 0;
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -106,6 +108,8 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+        binding.bottomNavView.selectedItemId = R.id.home
 
     }
 

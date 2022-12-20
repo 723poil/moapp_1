@@ -3,12 +3,17 @@
     <item android:title="search"
         android:id="@+id/search"
         android:icon="@drawable/ic_baseline_search_24"
-        android:iconTint="@color/black"/>
+        android:iconTint="@color/black"
+        android:enabled="true"
+        android:checked="false"/>
     <item android:title="home"
         android:id="@+id/home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:iconTint="@color/black"/>
+        android:iconTint="@color/black"
+        android:checked="true"
+        android:enabled="true"/>
     <item android:title="mypage"
         android:id="@+id/mypage"
-        android:icon="@drawable/ic_baseline_person_24"/>
+        android:icon="@drawable/ic_baseline_person_24"
+        android:enabled="true"/>
 </menu>
