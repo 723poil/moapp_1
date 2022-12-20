@@ -37,11 +37,6 @@ class ImageActivity : BaseActivity() {
 
         // 1. 공용저장소 권한이 있는지 확인
         requirePermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), PERM_STORAGE)
-
-
-
-
-
     }
 
 
@@ -174,8 +169,9 @@ class ImageActivity : BaseActivity() {
                                     DialogInterface.OnClickListener { dialog, id ->
                                         // NO 버튼 선택 시 수행
                                         // 초기화되게 해야함
-                                        var intent = Intent(this, ImageActivity::class.java)
-                                        startActivity(intent)
+//                                        var intent = Intent(this, ImageActivity::class.java)
+//                                        startActivity(intent)
+                                        ClassificationRepository.sendValidation(this)
                                     })
                             // Create the AlertDialog object and return it
                             builder.create()
